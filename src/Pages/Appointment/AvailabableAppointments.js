@@ -11,12 +11,12 @@ const AvailabableAppointments = ({ date }) => {
 
   const formattedDate = format(date || new Date(), 'PP');
   // useEffect(() => {
-  //   fetch(`http://localhost:5000/available?date=${formattedDate}`)
+  //   fetch(`https://calm-ocean-05551.herokuapp.com/available?date=${formattedDate}`)
   //     .then((res) => res.json())
   //     .then((data) => setServices(data));
   // }, [formattedDate]);
   const { isLoading, error, data: services, refetch } = useQuery(['available', formattedDate], () =>
-  fetch(`http://localhost:5000/available?date=${formattedDate}`)
+  fetch(`https://calm-ocean-05551.herokuapp.com/available?date=${formattedDate}`)
   .then(res => res.json())
 );
 
