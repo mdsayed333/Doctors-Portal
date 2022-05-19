@@ -22,7 +22,7 @@ const AddDoctor = () => {
     const imagesStorageKey = 'c64bc935e8287a097b30ceb8890d4c94';
 
   const { data: services, isLoading } = useQuery("services", () =>
-    fetch("http://localhost:5000/service").then((res) => res.json())
+    fetch("https://calm-ocean-05551.herokuapp.com/service").then((res) => res.json())
   );
 
   if (isLoading) {
@@ -50,7 +50,7 @@ const AddDoctor = () => {
                   img: img
               }
               // send to your database
-              fetch('http://localhost:5000/doctor', {
+              fetch('https://calm-ocean-05551.herokuapp.com/doctor', {
                   method: 'POST',
                   headers: {
                       'content-type': 'application/json',

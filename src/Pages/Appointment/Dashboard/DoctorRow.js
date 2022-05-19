@@ -7,7 +7,7 @@ const DoctorRow = ({ doctor, index, refetch, setDeletingDoctor }) => {
 //   const handleDelete = (email) => {
 //       const confirm = window.confirm("Do you really want to delete?");
 //       if(confirm){
-//         fetch(`http://localhost:5000/doctor/${email}`, {
+//         fetch(`https://calm-ocean-05551.herokuapp.com/doctor/${email}`, {
 //             method: 'DELETE',
 //             headers: {
 //                 authorization: `Bearer ${localStorage.getItem('accessToken')}`
